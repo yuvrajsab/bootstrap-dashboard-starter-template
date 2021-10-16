@@ -2,133 +2,174 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="./scss/style.scss">
+	<link rel="stylesheet" href="./scss/style.scss">
 
-    <title>Dashboard</title>
+	<title>Dashboard</title>
 </head>
 
 <body>
-    <header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company Name</a>
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-nav flex-row w-100 align-self-stretch align-items-center justify-content-end">
-            <div class="dropdown h-100 me-md-2">
-                <button class="btn h-100 shadow-none navbar-user-btn text-white rounded-0 dropdown-toggle" type="button"
-                    id="navbar-user-menu" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img width="auto" height="34" class="rounded-circle me-1"
-                        src="https://www.gravatar.com/avatar/0000000000000000000000000000000" alt="">
-                    Your Name
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="navbar-user-menu">
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Logout</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+	<header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-md-3 col-lg-2 col text-wrap me-0 px-3" href="#">Company Name</a>
+		<div class="d-flex m-1 d-md-none">
+			<div class="dropdown">
+				<button class="btn shadow-none navbar-user-btn rounded-0 dropdown-toggle" type="button"
+					id="navbar-user-mobile-menu" data-bs-toggle="dropdown" aria-expanded="false">
+					<img width="auto" height="34" class="rounded-circle"
+						src="https://www.gravatar.com/avatar/000000000000	0000000000000000000" alt="">
+				</button>
+				<ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="navbar-user-mobile-menu">
+					<li><a class="dropdown-item" href="#">Profile</a></li>
+					<li><a class="dropdown-item" href="#">Logout</a></li>
+				</ul>
+			</div>
+			<button class="ms-1 navbar-toggler rounded-0 shadow-none collapsed" type="button" data-bs-toggle="collapse"
+				data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="position-sticky pt-3">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <span data-feather="home"></span>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file"></span>
-                                Orders
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="shopping-cart"></span>
-                                Products
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="users"></span>
-                                Customers
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="bar-chart-2"></span>
-                                Reports
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="layers"></span>
-                                Integrations
-                            </a>
-                        </li>
-                    </ul>
+		<div class="d-none d-md-flex navbar-nav flex-row">
+			<div class="dropdown h-100 me-md-2">
+				<button class="btn h-100 shadow-none navbar-user-btn text-white rounded-0 dropdown-toggle" type="button"
+					id="navbar-user-menu" data-bs-toggle="dropdown" aria-expanded="false">
+					<img width="auto" height="34" class="rounded-circle me-1"
+						src="https://www.gravatar.com/avatar/0000000000000000000000000000000" alt="">
+					Your Name
+				</button>
+				<ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="navbar-user-menu">
+					<li><a class="dropdown-item" href="#">Profile</a></li>
+					<li><a class="dropdown-item" href="#">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
 
-                    <h6
-                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                        <span>Saved reports</span>
-                        <a class="link-secondary" href="#" aria-label="Add a new report">
-                            <span data-feather="plus-circle"></span>
-                        </a>
-                    </h6>
-                    <ul class="nav flex-column mb-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Current month
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Last quarter
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Social engagement
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Year-end sale
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+	<div class="container-fluid">
+		<div class="row">
+			<nav id="sidebar-menu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+				<div class="position-sticky h-100 overflow-auto pt-3">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">
+								<span data-feather="home"></span>
+								Dashboard
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="file"></span>
+								Orders
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="shopping-cart"></span>
+								Products
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="users"></span>
+								Customers
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="bar-chart-2"></span>
+								Reports
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="layers"></span>
+								Integrations
+							</a>
+						</li>
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+						<li x-data="{ open: false }" class="nav-item">
+							<a class="nav-link" x-on:click.prevent="open = !open" href="#" role="button">
+								<div class="d-flex align-items-center">
+									<div class="flex-fill">
+										<span data-feather="menu"></span>
+										Submenu
+									</div>
+									<span x-show="!open" class="text-reset m-0" data-feather="chevron-left"></span>
+									<span x-show="open" class="text-reset m-0" data-feather="chevron-down"></span>
+								</div>
+							</a>
+							<ul x-show="open" class="nav flex-column ms-2" style="display: none;">
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+										<span data-feather="arrow-right"></span>
+										Submenu Item 1
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+										<span data-feather="arrow-right"></span>
+										Submenu Item 2
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
 
-                {% block content %}
-                Content here
-                {% endblock %}
+					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+						<span>Saved reports</span>
+						<a class="link-secondary" href="#">
+							<span data-feather="plus-circle"></span>
+						</a>
+					</h6>
+					<ul class="nav flex-column mb-2">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="file-text"></span>
+								Current month
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="file-text"></span>
+								Last quarter
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="file-text"></span>
+								Social engagement
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="file-text"></span>
+								Year-end sale
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 
-                <footer class="py-2 border-top w-100 d-flex justify-content-between">
-                    <p>&copy; 2021 Company Name</p>
-                    <p class="text-muted">v1.0.0</p>
-                </footer>
-            </main>
-        </div>
-    </div>
+			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="./js/main.js"></script>
+				{% block content %}
+				Content here
+				{% endblock %}
+
+				<footer class="py-2 border-top w-100 d-flex justify-content-between">
+					<p>&copy; 2021 Company Name</p>
+					<p class="text-muted">v1.0.0</p>
+				</footer>
+			</main>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 
 </html>
