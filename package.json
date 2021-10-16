@@ -1,43 +1,43 @@
 {
-    "name": "bootstrap-dashboard-starter-template",
-    "version": "1.0.0",
-    "description": "A simple bootstrap dashboard starter template",
-    "scripts": {
-        "dev": "parcel ./src/index.njk",
-        "prebuild": "npx rimraf build",
-        "build": "parcel build --public-url ./ ./src/scss/style.scss ./src/js/main.js ./src/index.njk -d build --no-cache"
-    },
-    "keywords": [
-        "bootstrap",
-        "starter",
-        "admin",
-        "template",
-        "dashboard"
-    ],
-    "author": "Yuvraj",
-    "license": "MIT",
-    "devDependencies": {
-        "@popperjs/core": "^2.10.2",
-        "bootstrap": "^5.1.3",
-        "parcel-bundler": "^1.12.5",
-        "parcel-plugin-nunjucks": "^2.2.2",
-        "sass": "^1.43.2"
-    },
-    "htmlnano": {
-        "collapseAttributeWhitespace": true,
-        "collapseBooleanAttributes": false,
-        "collapseWhitespace": false,
-        "custom": [],
-        "deduplicateAttributeValues": true,
-        "mergeScripts": false,
-        "mergeStyles": false,
-        "removeUnusedCss": false,
-        "minifyJson": false,
-        "minifySvg": false,
-        "removeEmptyAttributes": false,
-        "removeRedundantAttributes": false,
-        "removeComments": false,
-        "sortAttributesWithLists": true,
-        "sortAttributes": true
-    }
+	"name": "bootstrap-dashboard-starter-template",
+	"version": "1.0.0",
+	"description": "A simple bootstrap dashboard starter template",
+	"scripts": {
+		"dev": "parcel ./src/index.njk",
+		"prebuild": "npx rimraf build",
+		"build": "parcel build --public-url ./ ./src/scss/style.scss ./src/js/main.js ./src/index.njk -d build --no-cache"
+	},
+	"keywords": [
+		"bootstrap",
+		"starter",
+		"admin",
+		"template",
+		"dashboard"
+	],
+	"author": "Yuvraj",
+	"license": "MIT",
+	"devDependencies": {
+		"@popperjs/core": "^2.10.2",
+		"bootstrap": "^5.1.3",
+		"parcel-bundler": "^1.12.5",
+		"parcel-plugin-nunjucks": "^2.2.2",
+		"sass": "^1.43.2"
+	},
+	"htmlnano": {
+		"collapseAttributeWhitespace": true,
+		"collapseBooleanAttributes": false,
+		"collapseWhitespace": false,
+		"custom": [],
+		"deduplicateAttributeValues": true,
+		"mergeScripts": false,
+		"mergeStyles": false,
+		"removeUnusedCss": false,
+		"minifyJson": false,
+		"minifySvg": false,
+		"removeEmptyAttributes": false,
+		"removeRedundantAttributes": false,
+		"removeComments": false,
+		"sortAttributesWithLists": true,
+		"sortAttributes": true
+	}
 }
