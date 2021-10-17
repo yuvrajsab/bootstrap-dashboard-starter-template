@@ -52,7 +52,11 @@
 		<div class="row">
 			<nav id="sidebar-menu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
 				<div class="position-sticky h-100 overflow-auto pt-3">
-					<ul class="nav flex-column">
+					<ul x-data="{
+						activeId: null,
+						toggle(id) { this.activeId = (this.activeId === id) ? null : id },
+						isVisible(id) { return this.activeId === id }
+					}" class="nav flex-column">
 						<li class="nav-item">
 							<a class="nav-link active" href="#">
 								<span data-feather="home"></span>
@@ -90,28 +94,61 @@
 							</a>
 						</li>
 
-						<li x-data="{ open: false }" class="nav-item">
-							<a class="nav-link" x-on:click.prevent="open = !open" href="#" role="button">
+						<li id="submenu1" x-data="{ id: $el.id }" class="nav-item">
+							<a class="nav-link" x-on:click.prevent="toggle(id)" href="#" role="button">
 								<div class="d-flex align-items-center">
 									<div class="flex-fill">
 										<span data-feather="menu"></span>
-										Submenu
+										Submenu 1
 									</div>
-									<span x-show="!open" class="text-reset m-0" data-feather="chevron-left"></span>
-									<span x-show="open" class="text-reset m-0" data-feather="chevron-down"></span>
+									<span x-show="!isVisible(id)" class="text-reset m-0" data-feather="chevron-left"></span>
+									<span x-show="isVisible(id)" class="text-reset m-0" data-feather="chevron-down"></span>
 								</div>
 							</a>
-							<ul x-show="open" class="nav flex-column ms-2" style="display: none;">
+							<ul x-show="isVisible(id)" class="nav flex-column ms-2" style="display: none;" x-transition.opacity>
 								<li class="nav-item">
 									<a class="nav-link" href="#">
 										<span data-feather="arrow-right"></span>
-										Submenu Item 1
+										Submenu 1 Item 1
 									</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#">
 										<span data-feather="arrow-right"></span>
-										Submenu Item 2
+										Submenu 1 Item 2
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li id="submenu2" x-data="{ id: $el.id }" class="nav-item">
+							<a class="nav-link" x-on:click.prevent="toggle(id)" href="#" role="button">
+								<div class="d-flex align-items-center">
+									<div class="flex-fill">
+										<span data-feather="menu"></span>
+										Submenu 2
+									</div>
+									<span x-show="!isVisible(id)" class="text-reset m-0" data-feather="chevron-left"></span>
+									<span x-show="isVisible(id)" class="text-reset m-0" data-feather="chevron-down"></span>
+								</div>
+							</a>
+							<ul x-show="isVisible(id)" class="nav flex-column ms-2" style="display: none;" x-transition.opacity>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+										<span data-feather="arrow-right"></span>
+										Submenu 2 Item 1
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+										<span data-feather="arrow-right"></span>
+										Submenu 2 Item 2
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+										<span data-feather="arrow-right"></span>
+										Submenu 2 Item 3
 									</a>
 								</li>
 							</ul>
