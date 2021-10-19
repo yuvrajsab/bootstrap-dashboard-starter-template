@@ -188,13 +188,15 @@
 
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
-				{% block content %}
-				Content here
-				{% endblock %}
+				<div class="mb-3">
+					{% block content %}
+					Content here
+					{% endblock %}
+				</div>
 
-				<footer class="py-2 border-top w-100 d-flex justify-content-between">
-					<p>&copy; 2021 Company Name</p>
-					<p class="text-muted">v1.0.0</p>
+				<footer class="py-2 mb-4 border-top d-flex">
+					<p class="m-0 flex-fill">&copy; 2021 Company Name</p>
+					<p class="m-0 text-muted">v1.0.0</p>
 				</footer>
 			</main>
 		</div>
