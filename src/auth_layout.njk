@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- app styles -->
+	<link rel="stylesheet" href="./scss/style.scss">
+
+	<style>
+		form .form-floating:focus-within {
+			z-index: 2;
+		}
+	</style>
+</head>
+
+<body class="h-100 d-flex align-items-center bg-light">
+
+	{% block content %}{% endblock %}
+
+	<!-- feather.js icons -->
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<!-- app js -->
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

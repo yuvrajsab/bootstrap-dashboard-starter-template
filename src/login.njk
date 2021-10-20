@@ -1,62 +1,37 @@
-<!doctype html>
-<html lang="en" class="h-100">
+{% extends "auth_layout.njk" %}
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col col-md-4 col-lg-3 mx-auto">
+			<form class="text-center">
+				<h4 class="mb-4 fw-normal">Company Name</h4>
 
-	<!-- app styles -->
-	<link rel="stylesheet" href="./scss/style.scss">
+				<div class="form-floating">
+					<input type="email" style="margin-bottom: -1px;" class="form-control rounded-0 rounded-top" id="floatingInput"
+						placeholder="name@example.com">
+					<label for="floatingInput">Email address</label>
+				</div>
+				<div class="form-floating mb-2">
+					<input type="password" class="form-control rounded-0 rounded-bottom" id="floatingPassword"
+						placeholder="Password">
+					<label for="floatingPassword">Password</label>
+				</div>
 
-	<style>
-		form .form-floating:focus-within {
-			z-index: 2;
-		}
-	</style>
-
-	<title>Login</title>
-</head>
-
-<body class="h-100 d-flex align-items-center bg-light">
-
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col col-md-4 col-lg-3 mx-auto">
-				<form class="text-center">
-					<h4 class="mb-4 fw-normal">Company Name</h4>
-
-					<div class="form-floating">
-						<input type="email" style="margin-bottom: -1px;" class="form-control rounded-0 rounded-top"
-							id="floatingInput" placeholder="name@example.com">
-						<label for="floatingInput">Email address</label>
+				<div class="mb-3">
+					<div class="form-check d-inline-block">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							Remember me
+						</label>
 					</div>
-					<div class="form-floating mb-2">
-						<input type="password" class="form-control rounded-0 rounded-bottom" id="floatingPassword"
-							placeholder="Password">
-						<label for="floatingPassword">Password</label>
-					</div>
+				</div>
 
-					<div class="mb-3">
-						<div class="form-check d-inline-block">
-							<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-							<label class="form-check-label" for="flexCheckDefault">
-								Remember me
-							</label>
-						</div>
-					</div>
+				<button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+				<p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+			</form>
 
-					<button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
-					<p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-				</form>
-
-			</div>
 		</div>
 	</div>
-
-	<!-- feather.js icons -->
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-	<!-- app js -->
-	<script src="./js/main.js"></script>
-</body>
-
-</html>
+</div>
+{% endblock %}
