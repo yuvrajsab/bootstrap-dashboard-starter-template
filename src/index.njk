@@ -1,11 +1,17 @@
 {% extends "./layout.njk" %}
 
+{% block styles %}
+<!-- chartist for chart -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chartist@0.11.4/dist/chartist.min.css"
+	integrity="sha256-seGyqLj5T52Hx8W7/YTajtNXGXQf+IksfkcaKGoTkbY=" crossorigin="anonymous">
+{% endblock %}
+
 {% block content %}
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 	<h1 class="h2">Dashboard</h1>
 </div>
 
-<div class="row">
+<div class="row mb-3">
 	{%
 	set boxes = [{value: "150", text: "New Orders", bgcolor: "primary", icon: "shopping-cart"},
 	{value: "53%", text: "Bounce Rate", bgcolor: "success", icon: "bar-chart"},
@@ -13,11 +19,42 @@
 	{value: "65", text: "Unique Visitors", bgcolor: "danger", icon: "pie-chart"}]
 	%}
 	{% for box in boxes %}
-	<div class="col-sm">
+	<div class="col-sm mb-md-0 mb-3">
 		{% from "./partials/info-box.njk" import info_box %}
 		{{ info_box(box.value, box.text, box.bgcolor, box.icon) }}
 	</div>
 	{% endfor %}
 </div>
 
+<div class="card bg-light shadow-sm mb-3">
+	<div class="card-header bg-transparent">
+		<p class="mb-0">Sales</p>
+		<h4 class="m-0 fw-bold">$10,567</h4>
+	</div>
+	<div class="card-body">
+		<div class="ct-chart ct-major-twelfth"></div>
+	</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- chatist.js for chat -->
+<script src="https://cdn.jsdelivr.net/npm/chartist@0.11.4/dist/chartist.min.js"
+	integrity="sha256-xNhpuwaNiVdna6L8Wy3GNuQz1z+SCmo4NY1c7cJ9Vdc=" crossorigin="anonymous"></script>
+<!-- for chart on dashboard. You can skip this.  -->
+<script>
+	var data = {
+		// A labels array that can contain any sort of values
+		labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+		// Our series array that contains series objects or in this case series data arrays
+		series: [
+			[5, 2, 4, 2, 0]
+		]
+	};
+
+	// Create a new line chart object where as first parameter we pass in a selector
+	// that is resolving to our chart container element. The Second parameter
+	// is the actual data object.
+	new Chartist.Line('.ct-chart', data);
+</script>
 {% endblock %}

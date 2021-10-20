@@ -5,7 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- app styles -->
 	<link rel="stylesheet" href="./scss/style.scss">
+
+	{% block styles %}{% endblock%}
 
 	<title>Dashboard</title>
 </head>
@@ -202,8 +205,12 @@
 		</div>
 	</div>
 
+	<!-- feather.js icons -->
 	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<!-- app js -->
 	<script src="./js/main.js"></script>
+
+	{% block scripts %}{% endblock %}
 </body>
 
 </html>
