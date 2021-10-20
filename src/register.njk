@@ -1,0 +1,42 @@
+{% extends "auth_layout.njk" %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col col-md-4 col-lg-3 text-center mx-auto">
+			<form>
+				<h4 class="mb-4 fw-normal">Company Name</h4>
+
+				<div class="form-floating mb-3">
+					<input type="text" class="form-control" id="floatingName" placeholder="full name">
+					<label for="floatingName">Full Name</label>
+				</div>
+
+				<div class="form-floating mb-3">
+					<input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+					<label for="floatingEmail">Email address</label>
+				</div>
+
+				<div class="form-floating mb-3">
+					<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+					<label for="floatingPassword">Password</label>
+				</div>
+
+				<div class="form-floating mb-3">
+					<input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirm Password">
+					<label for="floatingConfirmPassword">Confirm Password</label>
+				</div>
+
+				<button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+				<p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+			</form>
+
+			<p class="mb-0">
+				<a class="text-muted" href="./login.njk">
+					<i data-feather="arrow-left"></i> Login
+				</a>
+			</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
