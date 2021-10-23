@@ -13,13 +13,13 @@
 
 <div class="row mb-3">
 	{%
-	set boxes = [{value: "150", text: "New Orders", bgcolor: "primary", icon: "shopping-cart"},
-	{value: "53%", text: "Bounce Rate", bgcolor: "success", icon: "bar-chart"},
-	{value: "44", text: "User Registrations", bgcolor: "warning", icon: "user-plus"},
-	{value: "65", text: "Unique Visitors", bgcolor: "danger", icon: "pie-chart"}]
+	set boxes = [{value: "150", text: "New Orders", bgcolor: "primary", icon: "fa-shopping-cart"},
+	{value: "53%", text: "Bounce Rate", bgcolor: "success", icon: "fa-bar-chart"},
+	{value: "44", text: "User Registrations", bgcolor: "warning", icon: "fa-user-plus"},
+	{value: "65", text: "Unique Visitors", bgcolor: "danger", icon: "fa-pie-chart"}]
 	%}
 	{% for box in boxes %}
-	<div class="col-sm mb-md-0 mb-3">
+	<div class="col-12 col-md-6 col-lg-3 mb-3">
 		{% from "./partials/info-box.njk" import info_box %}
 		{{ info_box(box.value, box.text, box.bgcolor, box.icon) }}
 	</div>
@@ -38,7 +38,7 @@
 {% endblock %}
 
 {% block scripts %}
-<!-- chatist.js for chat -->
+<!-- chatist.js for chart -->
 <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.4/dist/chartist.min.js"
 	integrity="sha256-xNhpuwaNiVdna6L8Wy3GNuQz1z+SCmo4NY1c7cJ9Vdc=" crossorigin="anonymous"></script>
 <!-- for chart on dashboard. You can skip this.  -->
